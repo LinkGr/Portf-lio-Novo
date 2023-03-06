@@ -1,0 +1,201 @@
+/*Importando Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+/*Declarando variaveis*/
+:root {
+    --radial: radial-gradient(rgba(255, 0, 0, 0), rgba(126, 17, 128, 0.037), rgba(184, 25, 187, 0.062));
+    --base: rgb(18, 18, 18);
+    --roxo: #ae17fd;
+    --amarelo: #FFB11C;
+    --branco: #dbdbdb;
+}
+
+
+/*Seletor universal*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    min-height: 100vh;
+
+    scroll-behavior: smooth;
+
+    /*Estilização*/
+    font-size: 1.2vw;
+    background-color: var(--base);
+}
+
+
+
+/*AREA DA NAVEGAÇÃO*/
+#navegation {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 1.5vw;
+    width: 5.5vw;
+    min-width: 60px;
+    height: 100vh;
+}
+
+#nav-content {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 22vw;
+    width: 5.5vw;
+
+    /*Estilização*/
+    background-color: rgba(43, 43, 43, 0.24);
+    border-radius: 50vw;
+}
+
+#nav-content li {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    width: 55%;
+    height: auto;
+
+    /*Estilização*/
+    list-style: none;
+}
+
+#nav-content li a>img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*-- AREA DO CONTEUDO --*/
+#container {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    display: flex;
+    flex-direction: column;
+
+    /*Estilização*/
+    color: var(--branco);
+}
+
+#container > section {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    height: 100vh;
+    width: 100%;
+
+    /*Estilização*/
+    background: var(--radial);
+}
+
+#home {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12%;
+
+    /*Estilização*/
+}
+#home > article {
+    width: 40vw;
+}
+#home > article h1 {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    font-size: 3.9rem;
+
+    /*Estilização*/
+    font-family: 'Source Code Pro', monospace;
+    color: var(--roxo);
+}
+#home > article p {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    font-size: 2rem;
+    padding-top: 4%;
+    padding-left: 4%;
+
+    /*Estilização*/
+    font-family: 'Poppins', sans-serif;
+}
+#home > article > p > bdi {
+    /*Alinhamento e Posicionamento e Tamanho*/
+
+    /*Estilização*/
+    font-family: 'Source Code Pro', monospace;
+    color: var(--roxo);
+}
+#home > div {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    width: 23vw;
+    min-width: 50px;
+    height: 23vw;
+    min-height: 50px;
+
+    border-radius: 50vw;
+
+    /*Estilização*/
+    background-color: var(--branco);
+}
+
+
+#sobre {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12%;
+    
+    /*Estilização*/
+
+}
+#sobre > article{
+    /*Alinhamento e Posicionamento e Tamanho*/
+    float: left;
+    width: 40vw;
+}
+#sobre > article > h2{
+    /*Alinhamento e Posicionamento e Tamanho*/
+    font-size: 3.4rem;
+
+    /*Estilização*/
+    font-family: 'Source Code Pro', monospace;
+    color: var(--roxo);
+}
+#sobre > article > p {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    font-size: 1.4rem;
+    padding-top: 4%;
+    padding-left: 4%;
+
+    /*Estilização*/
+    font-family: 'Poppins', sans-serif;
+    color: var(--branco);
+}
+#sobre > div {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    width: 20vw;
+    height: 30vw;
+
+    /*Estilização*/
+    background-color: var(--branco);
+    box-shadow: #ac17fd13 0px 0px 140px;
+}
+
+
+
+
+#projetos {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Estilização*/
+
+}
