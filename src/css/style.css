@@ -76,6 +76,34 @@ html {
 
 
 /*-- AREA DO CONTEUDO --*/
+@keyframes gradient-text {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.texto-bonito {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    animation: gradient-text 3s linear infinite;
+
+
+    /*Estilização*/
+    background: linear-gradient(to right,
+            #AE17FD,
+            #5C09E6,
+            #30FC93,
+            #D409E6);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+
 #container {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: flex;
@@ -85,7 +113,7 @@ html {
     color: var(--branco);
 }
 
-#container > section {
+#container>section {
     /*Alinhamento e Posicionamento e Tamanho*/
     height: 100vh;
     width: 100%;
@@ -104,10 +132,13 @@ html {
 
     /*Estilização*/
 }
-#home > article {
+
+#home>article {
     width: 40vw;
 }
-#home > article h1 {
+
+
+#home>article h1 {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: 3.9rem;
 
@@ -115,7 +146,8 @@ html {
     font-family: 'Source Code Pro', monospace;
     color: var(--roxo);
 }
-#home > article p {
+
+#home>article p {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: 2rem;
     padding-top: 4%;
@@ -124,14 +156,16 @@ html {
     /*Estilização*/
     font-family: 'Poppins', sans-serif;
 }
-#home > article > p > bdi {
+
+#home>article>p>bdi {
     /*Alinhamento e Posicionamento e Tamanho*/
 
     /*Estilização*/
     font-family: 'Source Code Pro', monospace;
     color: var(--roxo);
 }
-#home > div {
+
+#home>div {
     /*Alinhamento e Posicionamento e Tamanho*/
     width: 23vw;
     min-width: 50px;
@@ -143,6 +177,7 @@ html {
     /*Estilização*/
     background-color: var(--branco);
 }
+
 .back-container {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: flex;
@@ -155,7 +190,8 @@ html {
 
     /*Estilização*/
 }
-.back-container > img {
+
+.back-container>img {
     /*Alinhamento e Posicionamento e Tamanho*/
     position: absolute;
     height: 98%;
@@ -173,16 +209,17 @@ html {
     align-items: center;
     justify-content: center;
     gap: 12%;
-    
-    /*Estilização*/
 
+    /*Estilização*/
 }
-#sobre > article{
+
+#sobre>article {
     /*Alinhamento e Posicionamento e Tamanho*/
     float: left;
     width: 40vw;
 }
-#sobre > article > h2{
+
+#sobre>article>h2 {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: 3.4rem;
 
@@ -190,7 +227,8 @@ html {
     font-family: 'Source Code Pro', monospace;
     color: var(--roxo);
 }
-#sobre > article > p {
+
+#sobre>article>p {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: 1.4rem;
     padding-top: 4%;
@@ -200,7 +238,8 @@ html {
     font-family: 'Poppins', sans-serif;
     color: var(--branco);
 }
-#sobre > div {
+
+#sobre>div {
     /*Alinhamento e Posicionamento e Tamanho*/
     width: 20vw;
     height: 30vw;
@@ -222,7 +261,8 @@ html {
     /*Estilização*/
 
 }
-#projetos > h2 {
+
+#projetos>h2 {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: 3.4rem;
     transition: 350ms;
@@ -231,6 +271,7 @@ html {
     font-family: 'Source Code Pro', monospace;
     color: var(--roxo);
 }
+
 #projetos-container {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: grid;
@@ -239,43 +280,46 @@ html {
     grid-template-columns: auto auto auto;
     grid-row: auto auto;
     gap: 5% 5%;
-    
+
 
     /*Estilização*/
-    
-    
+
+
 }
-#projetos-container > section {
+
+#projetos-container>section {
     /*Alinhamento e Posicionamento e Tamanho*/
     position: relative;
     width: 14vw;
     height: 14vw;
-    
+
     /*Estilização*/
-}   
-#projetos-container > section > img {
+}
+
+#projetos-container>section>img {
     /*Alinhamento e Posicionamento e Tamanho*/
     width: 100%;
     height: 100%;
-    
+
 
     /*Estilização*/
     background-color: var(--amarelo);
     transition: 350ms;
 }
-#projetos-container > section > img:hover {
+
+#projetos-container>section>img:hover {
     /*Alinhamento e Posicionamento e Tamanho*/
     z-index: 2;
-
-    transform: scale(1.5);
+    transform: scale(1.4);
+    transform: translate(0%, -10%);
 
     /*Estilização*/
-    
+
 }
-:has(#projetos-container > section > img:hover) :is(#projetos-container > section > img:not(:hover), #projetos > h2){
+
+:has(#projetos-container > section > img:hover) :is(#projetos-container > section > img:not(:hover), #projetos > h2) {
     /*Alinhamento e Posicionamento e Tamanho*/
-    
 
     /*Estilização*/
-    filter: blur(10px);
+    filter: blur(4px);
 }
