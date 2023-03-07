@@ -89,6 +89,7 @@ html {
     /*Alinhamento e Posicionamento e Tamanho*/
     height: 100vh;
     width: 100%;
+    transition: 350ms;
 
     /*Estilização*/
     background: var(--radial);
@@ -250,7 +251,7 @@ html {
     height: 14vw;
     
     /*Estilização*/
-    
+    filter: blur(0px);
 }   
 #projetos-container > section > img {
     /*Alinhamento e Posicionamento e Tamanho*/
@@ -262,10 +263,10 @@ html {
     background-color: var(--amarelo);
     transition: 350ms;
 }
-#projetos-container > section > img:hover {
+#container :has(#projetos-container > section > img:hover) {
     /*Alinhamento e Posicionamento e Tamanho*/
-    background-color: aliceblue;
     
+
     /*Estilização*/
-    
+    filter: blur(10px);
 }
