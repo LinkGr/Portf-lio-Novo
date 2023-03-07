@@ -225,7 +225,7 @@ html {
 #projetos > h2 {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: 3.4rem;
-    
+    transition: 350ms;
 
     /*Estilização*/
     font-family: 'Source Code Pro', monospace;
@@ -247,11 +247,11 @@ html {
 }
 #projetos-container > section {
     /*Alinhamento e Posicionamento e Tamanho*/
+    position: relative;
     width: 14vw;
     height: 14vw;
     
     /*Estilização*/
-    filter: blur(0px);
 }   
 #projetos-container > section > img {
     /*Alinhamento e Posicionamento e Tamanho*/
@@ -263,7 +263,16 @@ html {
     background-color: var(--amarelo);
     transition: 350ms;
 }
-#container :has(#projetos-container > section > img:hover) {
+#projetos-container > section > img:hover {
+    /*Alinhamento e Posicionamento e Tamanho*/
+    z-index: 2;
+
+    transform: scale(1.5);
+
+    /*Estilização*/
+    
+}
+:has(#projetos-container > section > img:hover) :is(#projetos-container > section > img:not(:hover), #projetos > h2){
     /*Alinhamento e Posicionamento e Tamanho*/
     
 
