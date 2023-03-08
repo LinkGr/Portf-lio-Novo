@@ -59,18 +59,24 @@ html {
     border-radius: 50vw;
 }
 
-#nav-content li {
+#nav-content > li {
     /*Alinhamento e Posicionamento e Tamanho*/
-    width: 55%;
+    width: 50%;
     height: auto;
 
     /*Estilização*/
     list-style: none;
 }
-
-#nav-content li a>img {
+#nav-content > li > a > img {
+    /*Alinhamento e Posicionamento e Tamanho*/
     width: 100%;
     height: auto;
+    transition: 300ms;
+}
+#nav-content > li > a:hover img{
+    /*Estilização*/
+    box-shadow: #ac17fd31 0px 0px 25px 0px;
+    background-color: #ac17fd13;
 }
 
 
@@ -126,8 +132,7 @@ html {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12%;
+    justify-content: space-evenly;
 
     /*Estilização*/
 }
@@ -150,7 +155,6 @@ html {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: 2rem;
     padding-top: 4%;
-    padding-left: 4%;
 
     /*Estilização*/
     font-family: 'Poppins', sans-serif;
@@ -206,20 +210,16 @@ html {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12%;
+    justify-content: space-evenly;
 
     /*Estilização*/
 }
 
-#sobre>article {
+#sobre>h2 {
     /*Alinhamento e Posicionamento e Tamanho*/
-    float: left;
-    width: 40vw;
-}
-
-#sobre>article>h2 {
-    /*Alinhamento e Posicionamento e Tamanho*/
+    position: absolute;
+    padding-top: 3%;
+    align-self: flex-start;
     font-size: 3.4rem;
 
     /*Estilização*/
@@ -227,34 +227,12 @@ html {
     color: var(--roxo);
 }
 
-#sobre>article>p {
-    /*Alinhamento e Posicionamento e Tamanho*/
-    font-size: 1.4rem;
-    padding-top: 4%;
-    padding-left: 4%;
-
-    /*Estilização*/
-    font-family: 'Poppins', sans-serif;
-    color: var(--branco);
-}
-
-#sobre>div {
-    /*Alinhamento e Posicionamento e Tamanho*/
-    width: 20vw;
-    height: 30vw;
-
-    /*Estilização*/
-    background-color: var(--amarelo);
-    box-shadow: #ac17fd13 0px 0px 140px;
-}
-
 
 
 #projetos {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 
     /*Estilização*/
@@ -263,7 +241,12 @@ html {
 
 #projetos>h2 {
     /*Alinhamento e Posicionamento e Tamanho*/
+    position: absolute;
+    align-self: flex-start;
+    padding-top: 3%;
+
     font-size: 3.4rem;
+
     transition: 350ms;
 
     /*Estilização*/
@@ -279,6 +262,7 @@ html {
     grid-template-columns: auto auto auto;
     grid-row: auto auto;
     gap: 5% 5%;
+    padding-top: 8%;
 
 
     /*Estilização*/
@@ -309,8 +293,7 @@ html {
 #projetos-container>section>img:hover {
     /*Alinhamento e Posicionamento e Tamanho*/
     z-index: 2;
-    transform: scale(1.4);
-    transform: translate(0%, -10%);
+    transform: translate(0%, -15%) scale(1.2);
 
     /*Estilização*/
 
