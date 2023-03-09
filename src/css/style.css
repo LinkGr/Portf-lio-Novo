@@ -293,7 +293,7 @@ html {
 #projetos-container>section>img:hover {
     /*Alinhamento e Posicionamento e Tamanho*/
     z-index: 2;
-    transform: translate(0%, -15%) scale(1.2);
+    transform: translate(0%, -10%) scale(1.2);
 
     /*Estilização*/
 
