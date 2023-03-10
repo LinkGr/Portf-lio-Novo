@@ -51,7 +51,7 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 22vw;
+    height: 26vw;
     width: 5.5vw;
 
     /*Estilização*/
@@ -59,7 +59,7 @@ html {
     border-radius: 50vw;
 }
 
-#nav-content > li {
+#nav-content>li {
     /*Alinhamento e Posicionamento e Tamanho*/
     width: 50%;
     height: auto;
@@ -67,13 +67,15 @@ html {
     /*Estilização*/
     list-style: none;
 }
-#nav-content > li > a > img {
+
+#nav-content>li>a>img {
     /*Alinhamento e Posicionamento e Tamanho*/
     width: 100%;
     height: auto;
     transition: 300ms;
 }
-#nav-content > li > a:hover img{
+
+#nav-content>li>a:hover img {
     /*Estilização*/
     box-shadow: #ac17fd31 0px 0px 25px 0px;
     background-color: #ac17fd13;
@@ -81,15 +83,6 @@ html {
 
 
 /*-- AREA DO CONTEUDO --*/
-@keyframes gradient-text {
-    from {
-        background-position: 0% center;
-    }
-
-    to {
-        background-position: -200% center;
-    }
-}
 
 .texto-bonito {
     /*Alinhamento e Posicionamento e Tamanho*/
@@ -106,6 +99,15 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
+}
+@keyframes gradient-text {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
 }
 
 
@@ -228,7 +230,6 @@ html {
 }
 
 
-
 #projetos {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: flex;
@@ -293,13 +294,13 @@ html {
 #projetos-container>section>img:hover {
     /*Alinhamento e Posicionamento e Tamanho*/
     z-index: 2;
-    transform: translate(0%, -10%) scale(1.2);
+    transform: translate(0%, -10%) scale(1.15);
 
     /*Estilização*/
 
 }
 
-:has(#projetos-container > section > img:hover) :is(#projetos-container > section > img:not(:hover), #projetos > h2) {
+:has(#projetos-container>section>img:hover) :is(#projetos-container>section>img:not(:hover), #projetos>h2) {
     /*Alinhamento e Posicionamento e Tamanho*/
 
     /*Estilização*/
