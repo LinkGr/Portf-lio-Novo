@@ -5,8 +5,8 @@
 
 /*Declarando variaveis*/
 :root {
-    --radial: radial-gradient(rgba(255, 0, 0, 0), rgba(126, 17, 128, 0.037), rgba(184, 25, 187, 0.062));
-    --base: rgb(18, 18, 18);
+    --radial: ;
+    --base: #121614;
     --roxo: #ae17fd;
     --amarelo: #FFB11C;
     --branco: #dbdbdb;
@@ -27,7 +27,7 @@ html {
     scroll-behavior: smooth;
 
     /*Estilização*/
-    font-size: 1.2vw;
+    font-size:  1vw;
     background-color: var(--base);
 }
 
@@ -39,8 +39,8 @@ html {
     display: flex;
     align-items: center;
     position: fixed;
-    left: 1.5vw;
-    width: 5.5vw;
+    left: 1vw;
+    width: 4.5vw;
     min-width: 60px;
     height: 100vh;
 }
@@ -51,12 +51,16 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 26vw;
-    width: 5.5vw;
+    height: 21vw;
+    width: 4.5vw;
+    transition: 350ms;
 
     /*Estilização*/
-    background-color: rgba(43, 43, 43, 0.24);
+    background-color: rgba(43, 43, 43, 0.151);
     border-radius: 50vw;
+}
+#nav-content:hover {
+    background-color: rgba(43, 43, 43, 0.281);
 }
 
 #nav-content>li {
@@ -91,11 +95,12 @@ html {
 
     /*Estilização*/
     background: linear-gradient(to right,
-            #AE17FD,
-            #5C09E6,
-            #30FC93,
-            #D409E6);
+            #ab0fff,
+            #7926ff,
+            #0fff83,
+            #eb0bff);
     background-size: 200%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
@@ -134,7 +139,8 @@ html {
     /*Alinhamento e Posicionamento e Tamanho*/
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 6%;
 
     /*Estilização*/
 }
@@ -146,7 +152,7 @@ html {
 
 #home>article h1 {
     /*Alinhamento e Posicionamento e Tamanho*/
-    font-size: 3.9rem;
+    font-size: clamp(0pt, 4.4rem, 48pt);
 
     /*Estilização*/
     font-family: 'Source Code Pro', monospace;
@@ -155,8 +161,8 @@ html {
 
 #home>article p {
     /*Alinhamento e Posicionamento e Tamanho*/
-    font-size: 2rem;
-    padding-top: 4%;
+    font-size: clamp(0pt, 1.8rem, 18pt);
+    padding-top: 6%;
 
     /*Estilização*/
     font-family: 'Poppins', sans-serif;
@@ -168,13 +174,14 @@ html {
     /*Estilização*/
     font-family: 'Source Code Pro', monospace;
     color: var(--roxo);
+    font-weight: bold;
 }
 
 #home>div {
     /*Alinhamento e Posicionamento e Tamanho*/
-    width: 23vw;
+    width: 22vw;
     min-width: 50px;
-    height: 23vw;
+    height: 22vw;
     min-height: 50px;
 
     border-radius: 50vw;
@@ -222,7 +229,7 @@ html {
     position: absolute;
     padding-top: 3%;
     align-self: flex-start;
-    font-size: 3.4rem;
+    font-size: clamp(0pt, 3.4rem, 36pt);
 
     /*Estilização*/
     font-family: 'Source Code Pro', monospace;
@@ -246,7 +253,7 @@ html {
     align-self: flex-start;
     padding-top: 3%;
 
-    font-size: 3.4rem;
+    font-size: clamp(0pt, 3.4rem, 36pt);
 
     transition: 350ms;
 
@@ -304,5 +311,5 @@ html {
     /*Alinhamento e Posicionamento e Tamanho*/
 
     /*Estilização*/
-    filter: blur(4px);
+    filter: blur(3px);
 }
