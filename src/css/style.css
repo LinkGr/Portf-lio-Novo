@@ -30,6 +30,8 @@ html {
     /*Estilização*/
     font-size:  1vw;
     background-color: var(--base);
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
 }
 
 
@@ -57,11 +59,11 @@ html {
     transition: 350ms;
 
     /*Estilização*/
-    background-color: rgba(43, 43, 43, 0.151);
+    background-color: rgba(43, 43, 43, 0.212);
     border-radius: 50vw;
 }
 #nav-content:hover {
-    background-color: rgba(43, 43, 43, 0.281);
+    background-color: rgba(43, 43, 43, 0.349);
 }
 
 #nav-content>li {
@@ -146,6 +148,8 @@ html {
     height: 100vh;
     width: 100%;
     transition: 350ms;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 
     /*Estilização*/
     background: var(--radial);
