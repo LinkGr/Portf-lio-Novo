@@ -1,15 +1,16 @@
 /*Importando Fontes*/
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 /*Declarando variaveis*/
 :root {
     --radial: ;
-    --base: #121614;
-    --roxo: #ae17fd;
+    --base: #121a16;
+    --roxo: #BB3DFF;
     --amarelo: #FFB11C;
     --branco: #dbdbdb;
+    --font-titulo: 'Source Code Pro', monospace;
+    --font-comum: 'Noto Sans', sans-serif;
 }
 
 
@@ -81,7 +82,7 @@ html {
 
 #nav-content>li>a:hover img {
     /*Estilização*/
-    box-shadow: #ac17fd31 0px 0px 25px 0px;
+    box-shadow: 0px 0px 25px #ac17fd31;
     background-color: #ac17fd13;
 }
 
@@ -95,23 +96,38 @@ html {
 
     /*Estilização*/
     background: linear-gradient(to right,
-            #ab0fff,
-            #7926ff,
+            #e100f5,
+            #7C6BFF,
             #0fff83,
-            #eb0bff);
+            #F50097);
+    /*Tamanho do background*/
     background-size: 200%;
+    /*Faz o background ficar contido somente dentro do texto*/
+    /*como se ele usasse o texto como mascara*/
     background-clip: text;
+    /*Faz o background ficar contido somente dentro do texto*/
+    /*como se ele usasse o texto como mascara*/
+    /*Precisa de ambos pra evitar erros*/
     -webkit-background-clip: text;
+    /*Faz a cor original do texto ser transparente*/
     -webkit-text-fill-color: transparent;
+    /*Faz o background não ficar contido na sessão do texto e ser infinito*/
     white-space: nowrap;
 }
 @keyframes gradient-text {
-    from {
+    0% {
         background-position: 0% center;
+        top:0%;
     }
 
-    to {
+    50% {
+        background-position: -100% center;
+        top:3%;
+    }
+
+    100% {
         background-position: -200% center;
+        top:0%;
     }
 }
 
@@ -149,32 +165,61 @@ html {
     width: 40vw;
 }
 
+.titulo-scanline {
+    animation: title-scanline linear 9s infinite;
+
+    background: repeating-linear-gradient(
+        rgb(255, 52, 238) 0%,
+        rgb(255, 52, 238) 3%,
+        rgb(226, 18, 209) 3%,
+        rgb(226, 18, 209) 8%
+    );
+    background-size: 100% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+@keyframes title-scanline {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% -200%;
+    }
+}
+
 
 #home>article h1 {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: clamp(0pt, 4.4rem, 48pt);
+    font-weight: normal;
 
     /*Estilização*/
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--font-titulo);
     color: var(--roxo);
+    text-shadow: 0px 0px 18px rgb(90, 4, 76);
 }
+
 
 #home>article p {
     /*Alinhamento e Posicionamento e Tamanho*/
     font-size: clamp(0pt, 1.8rem, 18pt);
     padding-top: 6%;
+    position: relative;
 
     /*Estilização*/
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-comum);
 }
 
 #home>article>p>bdi {
     /*Alinhamento e Posicionamento e Tamanho*/
+    position: relative;
 
     /*Estilização*/
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--font-titulo);
     color: var(--roxo);
-    font-weight: bold;
+    font-weight: 900;
 }
 
 #home>div {
@@ -232,7 +277,7 @@ html {
     font-size: clamp(0pt, 3.4rem, 36pt);
 
     /*Estilização*/
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--font-titulo);
     color: var(--roxo);
 }
 
@@ -258,7 +303,7 @@ html {
     transition: 350ms;
 
     /*Estilização*/
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--font-titulo);
     color: var(--roxo);
 }
 
