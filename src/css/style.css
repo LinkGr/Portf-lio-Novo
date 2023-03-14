@@ -28,12 +28,11 @@ html {
     scroll-behavior: smooth;
 
     /*Estilização*/
-    font-size:  1vw;
+    font-size: 1.2vw;
     background-color: var(--base);
     scroll-snap-align: start;
     scroll-snap-type: y mandatory;
 }
-
 
 /*
 
@@ -48,6 +47,7 @@ html {
     width: 4.5vw;
     min-width: 60px;
     height: 100vh;
+    z-index: 3;
 }
 
 #nav-content {
@@ -90,14 +90,25 @@ html {
     background-color: #ac17fd13;
 }
 
-#contatos {
-    all: unset;
+#contatos-nav {
+    
+}
+#contato-desativo {
+    display: block;
+    background-image: url("../images/navegation/contato.svg");
+    background-size: cover;
     width: 100%;
     height: 100%;
-    background-color: #121a1600;
 }
-#contatos:not(:checked) {
-    background: url(../images/navegation/projetos.svg);
+#contato-ativo {
+    display: none;
+    background-image: url("../images/navegation/contato-ativo.svg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#contatos-nav:checked #contato-desativo{
+    display: none;
 }
 
 /*-- AREA DO CONTEUDO --*/
@@ -372,4 +383,18 @@ html {
 
     /*Estilização*/
     filter: blur(3px);
+}
+
+
+#contatos {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+#contatos {
+    height: 30%;
+    width: 30%;
+    background-color: #22d478;
 }
